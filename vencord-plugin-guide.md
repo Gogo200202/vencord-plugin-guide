@@ -69,13 +69,13 @@ Here's how a patch to make the function always return true would look like
 ```
 
 - The `find` value is a unique string to find the module you need to patch. It only has to share the module, it doesn't have to be in the exact same function.
-In Patch Helper, there will be a field to check if a certain finder is unique or not
+In Test Patch, there will be a field to check if a certain finder is unique or not
   - If it's unique, the module number should show at the bottom, which means it's safe to use as a finder. **⚠ Do not rely on minified variable names** like `e` or `n` for your finders - those can change at any time and quickly break your patch
   - If it matches multiple modules, a "Multiple matches. Please refine your filter" error will be shown
-  - If it doesn't have any matches, a "No match. Perhaps the module is lazy loaded?" error will be shown. A lazy loaded module is a module only loaded when needed, like the contents of context menus. If you get the error but are sure your patch works, load the code by doing whatever triggers your patch, and then go back to Patch Helper
+  - If it doesn't have any matches, a "No match. Perhaps the module is lazy loaded?" error will be shown. A lazy loaded module is a module only loaded when needed, like the contents of context menus. If you get the error but are sure your patch works, load the code by doing whatever triggers your patch, and then go back to Test Patch
 
 - Within `replacement`, `match` is a regex which matches the relevant part of discord's code that you want to replace, and `replace` is the value to replace your match with.
-  - You might've noticed some special groups used in the match, like `$1` and especially `\i`. You can see the meaning of those in the Cheat Sheet present in Patch Helper.
+  - You might've noticed some special groups used in the match, like `$1` and especially `\i`. You can see the meaning of those in the Cheat Sheet present in Test Patch.
 
 I've left a few regex resources in the [Additional resources](#regular-expressions) section
 
