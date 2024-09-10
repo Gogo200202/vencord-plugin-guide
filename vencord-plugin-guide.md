@@ -53,7 +53,7 @@ Though discord's code is minified, so it's actually closer to
 e.isStaff=function(){return n(e)}
 ```
 ** **
-In settings, you'll notice a new "Patch Helper" tab in the Vencord category.
+In settings, you'll notice a new "Test Patch" tab in the Vencord category.
 
 > ℹ If you use VSCode, Vencord has a [companion extension](https://marketplace.visualstudio.com/items?itemName=Vendicated.vencord-companion). It's not required, but can be useful for doing things directly in your code editor
 
